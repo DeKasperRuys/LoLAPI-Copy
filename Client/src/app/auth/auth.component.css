@@ -1,0 +1,40 @@
+.bg-transparent {
+    background-color: transparent;
+  }
+  
+  :host {
+    height: 100%;
+  }
+  
+  .photo {
+    object-fit: contain;
+  }
+  
+  .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  a.navbar-brand.center {
+    display: none;
+  }
+  
+  
+  @media (max-width: 990px) {
+    
+    a.navbar-brand {
+          display:none;
+    }
+    
+    a.navbar-brand.center {
+      position: absolute;
+      display: block;
+      transform: translate(-50%);
+      left: 50%;
+      top: 10px;
+    }
+      
+    li.nav-item {
+      text-align: center;
+    }
+  }

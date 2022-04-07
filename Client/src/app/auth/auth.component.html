@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <form class="form-inline my-2 my-lg-0" *ngIf="!user">
+      <b>Sign In</b>
+      <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()"><span class="fab fa-google"></span></button>
+      <button class="btn btn-social-icon btn-facebook mx-1" (click)="signInWithFB()"><span class="fab fa-facebook"></span></button>
+    </form>
+    <form class="form-inline my-2 my-lg-0" *ngIf="user && user.provider === GoogleLoginProvider.PROVIDER_ID">
+      <button class="btn btn-danger" (click)="signOut()">Sign out</button>
+    </form>
+  </a>
+</nav>
+
+ 
+
+
+
+   <app-home *ngIf="user && user.provider === GoogleLoginProvider.PROVIDER_ID"></app-home>

@@ -1,0 +1,78 @@
+<h1>Classes</h1>
+<app-theclass></app-theclass>
+<table *ngIf="TheClass">
+
+        <tr>
+
+            <th>name</th>
+            <th>hit_die</th>
+            <th>subclasses</th>
+            <th>url</th>
+        </tr>
+        <tr  style="text-align:center">
+            
+            <td>{{TheClass.name}}</td>
+            <td>{{TheClass.hit_die}}</td>
+            <td>
+                <div *ngFor="let sc of TheClass.subclasses">{{ sc.name }}</div>
+            </td>
+            <td>{{TheClass.url}}</td>
+        </tr>
+</table>
+<br>
+<br>
+<h1>Races</h1>
+<app-therace></app-therace>
+<table *ngIf="TheRace">
+
+        <tr>
+
+            <th>Name</th>
+            <th>Movement</th>
+            <th>Age</th>
+            <th>Alignments</th>
+            <th>Size</th>
+            <th>Language Description</th>
+        </tr>
+        <tr  style="text-align:center">
+            
+            <td>{{TheRace.name}}</td>
+            <td>{{TheRace.speed}}</td>
+            <td>{{TheRace.age}}</td>
+            <td>{{TheRace.alignment}}</td>
+            <td>{{TheRace.size}}: {{TheRace.size_description}}</td>
+            <td>{{TheRace.language_desc}}</td>
+        </tr>
+</table>
+<br>
+<br>
+<h1>Spells</h1>
+
+<app-thespells></app-thespells>
+
+
+<table *ngIf="TheSpell">
+
+    <tr>
+
+        <th>name</th>
+        <th>range</th>
+        <th>material required</th>
+        <th>duration</th>
+        <th>concentration</th>
+        <th>casting time</th>
+        <th>level</th>
+        <th>url</th>
+    </tr>
+    <tr  style="text-align:center">
+        
+        <td>{{TheSpell.name}}</td>
+        <td>{{TheSpell.range}}</td>
+        <td>{{TheSpell.material}}</td>
+        <td>{{TheSpell.duration}}</td>
+        <td>{{TheSpell.concentration}}</td>
+        <td>{{TheSpell.casting_time}}</td>
+        <td>{{TheSpell.level}}</td>
+        <td>{{TheSpell.url}}</td>
+    </tr>
+</table>
